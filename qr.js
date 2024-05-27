@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Venocyber_Tech,
+	default: Future_Trends,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function VENOCYBER_MD_QR_CODE() {
+	async function GODZILLA_BOT_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Venocyber_Tech = Venocyber_Tech({
+			let Qr_Code_By_Future_Trends = Future_Trends({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Venocyber_Tech.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Venocyber_Techr.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Future_Tech.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Future_Trends.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,53 +56,53 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Venocyber_Tech.sendMessage(Qr_Code_By_Venocyber_Tech.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_Future_Trends.sendMessage(Qr_Code_By_Future_Trends.user.id, { text: '' + b64data });
 	
-				   let VENOCYBER_MD_TEXT = `
-*_Qr Code By Venocyber Tech_*
-*_Made With 🤍_*
+				   let GODZILLA_BOT_TEXT = `
+*_You've used Qr Code for GODZILLA BOT_*
+*_Connection successful_*
 ______________________________________
-*_Pair Code Connected by Venocyber Tech_*
-*_Made With 🤍_*
+*_You have used Pair Code for GODZILLA BOT_*
+*_Connection successful_*
 ______________________________________
 ╔════◇
-║ *『 WOW YOU CHOOSEN VENOCYBER-MD 』*
+║ *『 𝐓𝐇𝐀𝐍𝐊𝐒 𝐅𝐎𝐑 𝐂𝐇𝐎𝐎𝐒𝐈𝐍𝐆 𝐆𝐎𝐃𝐙𝐈𝐋𝐋𝐀 𝐁𝐎𝐓 』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚══════════════════════╝
 ╔═════◇
-║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _youtube.com/@JASTINMTEWA-vn9pl_
-║❒ *Owner:* _https://wa.me/message/A4QG2JZKBXFTN1_
-║❒ *Repo:* _https://github.com/Kingjux/venocyber-md_
-║❒ *WaGroup:* _https://chat.whatsapp.com/HSln3blDuuuKvC8njxyCCN_
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l_
-║❒ *Plugins:* _https://github.com/Kingjux/venocyber-md-plugins_
+║  『••• 𝐆𝐎𝐃𝐙𝐈𝐋𝐋𝐀 𝐌𝐃 •••』
+║
+║❒ *Owner:* https://wa.me/message/OZTNJWQSS2LAM1
+║❒ *Repo:* _https://github.com/ItsFutureTrends/Godzilla-MD
+║❒ *Wa Group:* ****
+║❒ *Wa Channel:* https://whatsapp.com/channel/0029VaaxfYH2ER6oOMkqFS3W
+║
 ╚══════════════════════╝ 
 _____________________________________
 	
-_Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Venocyber_Tech.sendMessage(Qr_Code_By_Venocyber_Tech.user.id,{text:Venocyber_MD_TEXT},{quoted:session})
+ `Don't Forget To Give Star To Godzilla MD Repo`
+	 await You_have_used_Qr_Code_for_GODZILLA_BOT.sendMessage You_have_used_Qr_Code_for_GODZILLA_BOT.(.user.id,{text:GODZILLA_MD_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code_By_Venocyber_Tech.ws.close();
+					await You_have_used_Qr_Code_for_GODZILLA_BOT.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
-					VENOCYBER_MD_QR_CODE();
+					GODZILLA_BOT_QR_CODE();
 				}
 			});
 		} catch (err) {
 			if (!res.headersSent) {
 				await res.json({
-					code: "Service is Currently Unavailable"
+					code: "TRY LINKING GODZILLA LATER"
 				});
 			}
 			console.log(err);
 			await removeFile("temp/" + id);
 		}
 	}
-	return await VENOCYBER_MD_QR_CODE()
+	return await GODZILLA_BOT_QR_CODE()
 });
 module.exports = router
