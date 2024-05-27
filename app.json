@@ -1,9 +1,9 @@
 {
-    "name": "VENOCYBER MD session",
-    "description": "VENOCYBER-MD WA bot, Created by Venocyber King jux to simplify your digital lives",
-    "logo": "https://telegra.ph/file/12b0fb245e6b8ba4bf718.jpg",
+    "name": "GODZILLA BOT session",
+    "description": "GODZILLA BOT WA bot, Created by Tylor and Paschal to simplify your digital lives",
+    "logo": "https://telegra.ph/file/71c8e0d16cee3425e0ee5.jpg",
     "repository": "https://github.com/kingjux/Venocyber-Md-Session",
-    "keywords": ["VenocyberMd"],
+    "keywords": ["GodzillaBot"],
     "success_url": "/", 
     "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" } ],
     "env": {      
